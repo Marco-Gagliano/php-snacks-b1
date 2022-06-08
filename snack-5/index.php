@@ -2,9 +2,15 @@
 
 /* 
   ## Snack 5
-  endere un paragrafo abbastanza lungo, contenente diverse frasi. 
+  Prendere un paragrafo abbastanza lungo, contenente diverse frasi. 
   Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.
 */
+
+$paragrafo = 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.';
+
+$paragrafo_diviso = explode("." , $paragrafo);
+
+var_dump($paragrafo_diviso)
 
 ?>
 
@@ -18,6 +24,22 @@
   <title>Snack 5</title>
 </head>
 <body>
+  <header>
+    <h1>Snack 5</h1>
+  </header>
   
+  <main>
+    <h2>Paragrafo lungo:</h2>
+    <p><?php echo $paragrafo ?></p>
+
+    <h2>Paragrafi divisi: </h2>
+    <?php 
+      // Il ciclo "foreach" scorre un blocco di codice per ogni elemento in un array (funziona solo su array).
+      foreach($paragrafo_diviso as $value){
+        echo "<p>{$value}<p>";
+      }
+    ?>
+
+  </main>
 </body>
 </html>
