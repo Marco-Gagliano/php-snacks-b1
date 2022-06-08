@@ -6,7 +6,47 @@
   Olimpia Milano - Cantù | 55-60
 */
 
+$incontri = [
+  [
+    'squadraCasa' => 'Slipknot',
+    'squadraOspite' => 'Korn',
+    'puntiCasa' => '180',
+    'puntiOspite' => '176',
+  ],
+  
+  [
+    'squadraCasa' => 'Limp Bizkit',
+    'squadraOspite' => 'Linkin Park',
+    'puntiCasa' => '90',
+    'puntiOspite' => '115',
+  ],
+
+  [
+    'squadraCasa' => 'Architects',
+    'squadraOspite' => 'Parkway Drive',
+    'puntiCasa' => '86',
+    'puntiOspite' => '71',
+  ],
+
+  [
+    'squadraCasa' => 'Rammstein',
+    'squadraOspite' => 'Spiritbox',
+    'puntiCasa' => '160',
+    'puntiOspite' => '80',
+  ],
+
+  [
+    'squadraCasa' => 'Blood Youth',
+    'squadraOspite' => 'Machine Head',
+    'puntiCasa' => '94',
+    'puntiOspite' => '98',
+  ],
+];
+
+// var_dump($incontri);
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -18,6 +58,19 @@
   <title>Snack 1</title>
 </head>
 <body>
+  <h1>Snack 1</h1>
   
+  <ul>
+    <?php for($i = 0; $i < count($incontri); $i++): ?>
+      <!-- il codice HTML verrà ciclato -->
+      <li>
+        <?php echo $incontri[$i]['squadraCasa'] ?> -
+        <?php echo $incontri[$i]['squadraOspite'] ?> |
+        <?php echo $incontri[$i]['puntiCasa'] ?> -
+        <?php echo $incontri[$i]['puntiOspite'] ?> 
+      </li>
+    <?php endfor; ?>
+  </ul>
+
 </body>
 </html>
